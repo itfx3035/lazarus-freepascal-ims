@@ -1,0 +1,54 @@
+object fMain: TfMain
+  Left = 267
+  Height = 470
+  Top = 128
+  Width = 245
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'itfx IMS information agent'
+  ClientHeight = 470
+  ClientWidth = 245
+  OnClose = FormClose
+  LCLVersion = '1.0.4.0'
+  object sbMain: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 447
+    Width = 245
+    Panels = <>
+    SimpleText = 'Waiting...'
+  end
+  object scbMain: TScrollBox
+    Left = 7
+    Height = 430
+    Top = 10
+    Width = 231
+    HorzScrollBar.Page = 227
+    VertScrollBar.Increment = 42
+    VertScrollBar.Page = 426
+    VertScrollBar.Smooth = True
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    AutoSize = True
+    TabOrder = 1
+  end
+  object tStart: TTimer
+    Interval = 50
+    OnTimer = tStartTimer
+    left = 168
+    top = 24
+  end
+  object tThreadWatcher: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = tThreadWatcherTimer
+    left = 248
+    top = 24
+  end
+  object tClose: TTimer
+    Tag = 1
+    Enabled = False
+    Interval = 50
+    OnTimer = tCloseTimer
+    left = 173
+    top = 95
+  end
+end

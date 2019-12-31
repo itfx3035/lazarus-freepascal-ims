@@ -1,0 +1,168 @@
+object fEditAlarmElement: TfEditAlarmElement
+  Left = 284
+  Height = 184
+  Top = 194
+  Width = 558
+  BorderIcons = [biSystemMenu]
+  Caption = 'Edit alarm template element'
+  ClientHeight = 184
+  ClientWidth = 558
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.0.4.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 12
+    Width = 62
+    Caption = 'Alarm type:'
+    ParentColor = False
+  end
+  object cbAlarmType: TComboBox
+    Left = 80
+    Height = 23
+    Top = 8
+    Width = 470
+    ItemHeight = 15
+    OnChange = cbAlarmTypeChange
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object gbEMailSettings: TGroupBox
+    Left = 8
+    Height = 106
+    Top = 40
+    Width = 542
+    Caption = 'E-mail settings'
+    ClientHeight = 88
+    ClientWidth = 538
+    TabOrder = 1
+    Visible = False
+    object Label7: TLabel
+      Left = 10
+      Height = 16
+      Top = 6
+      Width = 77
+      Caption = 'Sender e-mail:'
+      ParentColor = False
+    end
+    object eEMailSender: TEdit
+      Left = 92
+      Height = 23
+      Top = 3
+      Width = 170
+      TabOrder = 0
+    end
+    object Label13: TLabel
+      Left = 270
+      Height = 16
+      Top = 6
+      Width = 81
+      Caption = 'Send to e-mail:'
+      ParentColor = False
+    end
+    object eEMailSendTo: TEdit
+      Left = 358
+      Height = 23
+      Top = 3
+      Width = 170
+      TabOrder = 1
+    end
+    object Label14: TLabel
+      Left = 18
+      Height = 16
+      Top = 34
+      Width = 69
+      Caption = 'SMTP server:'
+      ParentColor = False
+    end
+    object eEMailSMTPServer: TEdit
+      Left = 92
+      Height = 23
+      Top = 32
+      Width = 84
+      TabOrder = 2
+    end
+    object Label15: TLabel
+      Left = 182
+      Height = 16
+      Top = 34
+      Width = 26
+      Caption = 'port:'
+      ParentColor = False
+    end
+    object eEMailSMTPPort: TEdit
+      Left = 214
+      Height = 23
+      Top = 32
+      Width = 48
+      TabOrder = 3
+    end
+    object Label16: TLabel
+      Left = 53
+      Height = 16
+      Top = 64
+      Width = 34
+      Caption = 'Login:'
+      ParentColor = False
+    end
+    object eEMailLogin: TEdit
+      Left = 92
+      Height = 23
+      Top = 60
+      Width = 170
+      TabOrder = 4
+    end
+    object Label17: TLabel
+      Left = 297
+      Height = 16
+      Top = 63
+      Width = 54
+      Caption = 'Password:'
+      ParentColor = False
+    end
+    object eEMailPassword: TEdit
+      Left = 358
+      Height = 23
+      Top = 60
+      Width = 170
+      EchoMode = emPassword
+      PasswordChar = '*'
+      TabOrder = 5
+    end
+    object Label18: TLabel
+      Left = 270
+      Height = 16
+      Top = 36
+      Width = 79
+      Caption = 'E-mail subject:'
+      ParentColor = False
+    end
+    object eEMailSubject: TEdit
+      Left = 358
+      Height = 23
+      Top = 32
+      Width = 171
+      TabOrder = 6
+    end
+  end
+  object bCancel: TButton
+    Left = 475
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'Cancel'
+    OnClick = bCancelClick
+    TabOrder = 2
+  end
+  object bOK: TButton
+    Left = 392
+    Height = 25
+    Top = 152
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 3
+  end
+end

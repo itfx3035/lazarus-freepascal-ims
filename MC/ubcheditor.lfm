@@ -1,0 +1,100 @@
+object fBchEditor: TfBchEditor
+  Left = 343
+  Height = 344
+  Top = 199
+  Width = 586
+  BorderIcons = [biSystemMenu]
+  Caption = 'Batch list'
+  ClientHeight = 324
+  ClientWidth = 586
+  Menu = mmBatchEditor
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.0.4.0'
+  object sgBch: TStringGrid
+    Left = 7
+    Height = 280
+    Top = 8
+    Width = 574
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ColCount = 1
+    Columns = <    
+      item
+        Title.Caption = 'Batch title'
+        Width = 540
+      end>
+    DefaultRowHeight = 18
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowSelect, goSmoothScroll]
+    PopupMenu = pmBatchEditor
+    RowCount = 2
+    TabOrder = 0
+    OnDblClick = sgBchDblClick
+    OnResize = sgBchResize
+  end
+  object bCancel: TButton
+    Left = 506
+    Height = 25
+    Top = 293
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = bCancelClick
+    TabOrder = 1
+  end
+  object bOK: TButton
+    Left = 424
+    Height = 25
+    Top = 293
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 2
+  end
+  object mmBatchEditor: TMainMenu
+    left = 104
+    top = 112
+    object miActions: TMenuItem
+      Caption = 'Actions'
+      object miAddBatch: TMenuItem
+        Caption = 'Add batch'
+        OnClick = miAddBatchClick
+      end
+      object miCopyBatch: TMenuItem
+        Caption = 'Copy batch'
+        OnClick = miCopyBatchClick
+      end
+      object miEditBatch: TMenuItem
+        Caption = 'Edit batch'
+        OnClick = miEditBatchClick
+      end
+      object miDeleteBatch: TMenuItem
+        Caption = 'Delete batch'
+        OnClick = miDeleteBatchClick
+      end
+    end
+  end
+  object pmBatchEditor: TPopupMenu
+    left = 220
+    top = 112
+    object pmiAddBatch: TMenuItem
+      Caption = 'Add batch'
+      OnClick = pmiAddBatchClick
+    end
+    object pmiCopyBatch: TMenuItem
+      Caption = 'Copy batch'
+      OnClick = pmiCopyBatchClick
+    end
+    object pmiEditBatch: TMenuItem
+      Caption = 'Edit batch'
+      OnClick = pmiEditBatchClick
+    end
+    object pmiDelBatch: TMenuItem
+      Caption = 'Delete batch'
+      OnClick = pmiDelBatchClick
+    end
+  end
+end

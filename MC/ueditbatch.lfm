@@ -1,0 +1,127 @@
+object fBatchEdit: TfBatchEdit
+  Left = 337
+  Height = 365
+  Top = 175
+  Width = 573
+  BorderIcons = [biSystemMenu]
+  Caption = 'Batch edit'
+  ClientHeight = 345
+  ClientWidth = 573
+  Menu = mmEditBatchMenu
+  OnClose = FormClose
+  LCLVersion = '1.0.4.0'
+  object sgBchEdit: TStringGrid
+    Left = 6
+    Height = 266
+    Top = 40
+    Width = 561
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ColCount = 4
+    Columns = <    
+      item
+        Title.Caption = 'Command'
+        Width = 300
+      end    
+      item
+        Title.Caption = 'Wait for finish'
+        Width = 85
+      end    
+      item
+        Title.Caption = 'Collect output'
+        Width = 85
+      end    
+      item
+        Title.Caption = 'Timeout'
+        Width = 60
+      end>
+    DefaultRowHeight = 18
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowSelect, goSmoothScroll]
+    PopupMenu = pmEditBatchMenu
+    RowCount = 2
+    TabOrder = 0
+    OnDblClick = sgBchEditDblClick
+    OnResize = sgBchEditResize
+  end
+  object bCancel: TButton
+    Left = 493
+    Height = 25
+    Top = 313
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = bCancelClick
+    TabOrder = 1
+  end
+  object bOK: TButton
+    Left = 416
+    Height = 25
+    Top = 313
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Left = 9
+    Height = 16
+    Top = 10
+    Width = 67
+    Caption = 'Batch name:'
+    ParentColor = False
+  end
+  object eBatchName: TEdit
+    Left = 81
+    Height = 23
+    Top = 8
+    Width = 487
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 3
+  end
+  object mmEditBatchMenu: TMainMenu
+    left = 256
+    top = 112
+    object miActions: TMenuItem
+      Caption = 'Actions'
+      object miAddBatchElement: TMenuItem
+        Caption = 'Add batch command'
+        OnClick = miAddBatchElementClick
+      end
+      object miCopyBatchElement: TMenuItem
+        Caption = 'Copy batch command'
+        OnClick = miCopyBatchElementClick
+      end
+      object miEditBatchCommand: TMenuItem
+        Caption = 'Edit batch command'
+        OnClick = miEditBatchCommandClick
+      end
+      object miDelBatchCommand: TMenuItem
+        Caption = 'Delete batch command'
+        OnClick = miDelBatchCommandClick
+      end
+    end
+  end
+  object pmEditBatchMenu: TPopupMenu
+    left = 368
+    top = 112
+    object pmiAddBatchCommand: TMenuItem
+      Caption = 'Add batch command'
+      OnClick = pmiAddBatchCommandClick
+    end
+    object pmiCopyBatchCommand: TMenuItem
+      Caption = 'Copy batch command'
+      OnClick = pmiCopyBatchCommandClick
+    end
+    object pmiEditBatchCommand: TMenuItem
+      Caption = 'Edit batch command'
+      OnClick = pmiEditBatchCommandClick
+    end
+    object pmiDelBatchCommand: TMenuItem
+      Caption = 'Delete batch command'
+      OnClick = pmiDelBatchCommandClick
+    end
+  end
+end

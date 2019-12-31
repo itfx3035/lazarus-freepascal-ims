@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <Flags>
+        <MainUnitHasCreateFormStatements Value="False"/>
+      </Flags>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="IMS server"/>
+      <UseAppBundle Value="False"/>
+      <ResourceType Value="res"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="LazDaemon"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="24">
+      <Unit0>
+        <Filename Value="imsserv.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="imsserv"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="daemonmapperunit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DaemonMapper1"/>
+        <HasResources Value="True"/>
+        <UnitName Value="DaemonMapperUnit1"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="daemonunit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Daemon1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DaemonUnit1"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="umain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uMain"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="ustrutils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uStrUtils"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="uschedulerexecuter.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uSchedulerExecuter"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="uscheduler.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uScheduler"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="ureserveservicelistener.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uReserveServiceListener"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="ureserveserviceconnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uReserveServiceConnection"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="ureportbuilder.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uReportBuilder"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="uprocessexecute.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uProcessExecute"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="upath.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uPath"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="uofflineinspector.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uOfflineInspector"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="unetwork.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uNetwork"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="umclistener.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uMCListener"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="umcconnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uMCConnection"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="umail.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uMail"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="ulog.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uLog"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="ucrypt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uCrypt"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="uconst.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uConst"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="ubatchexecute.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uBatchExecute"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="ualarm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uAlarm"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="uagentinformationlistener.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uAgentInformationListener"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="uagentinformationconnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uAgentInformationConnection"/>
+      </Unit23>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+    </SearchPaths>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,89 @@
+object fEditBatchElement: TfEditBatchElement
+  Left = 388
+  Height = 168
+  Top = 210
+  Width = 424
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Edit batch element'
+  ClientHeight = 168
+  ClientWidth = 424
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.0.4.0'
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 11
+    Width = 61
+    Caption = 'Command:'
+    ParentColor = False
+  end
+  object eCommand: TEdit
+    Left = 96
+    Height = 23
+    Top = 8
+    Width = 320
+    TabOrder = 0
+  end
+  object cbWait: TCheckBox
+    Left = 96
+    Height = 19
+    Top = 42
+    Width = 148
+    Caption = 'Wait for execution finish'
+    TabOrder = 1
+  end
+  object cbWriteLog: TCheckBox
+    Left = 96
+    Height = 19
+    Top = 68
+    Width = 251
+    Caption = 'Collect execution output and write to report'
+    TabOrder = 2
+  end
+  object eTimeout: TEdit
+    Left = 96
+    Height = 23
+    Top = 96
+    Width = 80
+    TabOrder = 3
+    Text = '0'
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 16
+    Top = 99
+    Width = 77
+    Caption = 'Timeout (sec):'
+    ParentColor = False
+  end
+  object bCancel: TButton
+    Left = 341
+    Height = 25
+    Top = 136
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = bCancelClick
+    TabOrder = 4
+  end
+  object bOK: TButton
+    Left = 259
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 5
+  end
+  object Label3: TLabel
+    Left = 192
+    Height = 16
+    Top = 99
+    Width = 132
+    Caption = '(set 0 to disable timeout)'
+    ParentColor = False
+  end
+end

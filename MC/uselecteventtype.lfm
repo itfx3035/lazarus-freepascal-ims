@@ -1,0 +1,45 @@
+object fSelectEventType: TfSelectEventType
+  Left = 311
+  Height = 267
+  Top = 181
+  Width = 492
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Select task type'
+  ClientHeight = 267
+  ClientWidth = 492
+  OnClose = FormClose
+  LCLVersion = '1.0.4.0'
+  object tvEvents: TTreeView
+    Left = 6
+    Height = 224
+    Top = 8
+    Width = 480
+    AutoExpand = True
+    DefaultItemHeight = 18
+    ReadOnly = True
+    TabOrder = 0
+    OnDblClick = tvEventsDblClick
+    Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+  end
+  object bCancel: TButton
+    Left = 413
+    Height = 25
+    Top = 237
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = bCancelClick
+    TabOrder = 1
+  end
+  object bOK: TButton
+    Left = 336
+    Height = 25
+    Top = 237
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 2
+  end
+end

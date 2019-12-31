@@ -1,0 +1,19 @@
+object DaemonMapper1: TDaemonMapper1
+  DaemonDefs = <  
+    item
+      DaemonClassName = 'TDaemon1'
+      Name = 'IMSserver'
+      Description = 'IMS server'
+      DisplayName = 'IMS server'
+      Options = [doAllowStop, doAllowPause]
+      WinBindings.Dependencies = <>
+      WinBindings.StartType = stBoot
+      WinBindings.WaitHint = 0
+      WinBindings.IDTag = 0
+      WinBindings.ServiceType = stWin32
+      WinBindings.ErrorSeverity = esIgnore
+      LogStatusReport = False
+    end>
+  left = 704
+  top = 225
+end

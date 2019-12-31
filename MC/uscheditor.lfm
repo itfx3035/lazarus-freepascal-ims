@@ -1,0 +1,103 @@
+object fSchEditor: TfSchEditor
+  Left = 276
+  Height = 372
+  Top = 175
+  Width = 569
+  BorderIcons = [biSystemMenu, biMaximize]
+  Caption = 'Schedule editor'
+  ClientHeight = 352
+  ClientWidth = 569
+  Menu = mmSch
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.0.4.0'
+  object sgSch: TStringGrid
+    Left = 6
+    Height = 310
+    Top = 8
+    Width = 557
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ColCount = 2
+    Columns = <    
+      item
+        Title.Caption = 'Task title'
+        Width = 300
+      end    
+      item
+        Title.Caption = 'Task type'
+        Width = 240
+      end>
+    DefaultRowHeight = 18
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowSelect, goSmoothScroll]
+    PopupMenu = pmSch
+    RowCount = 2
+    TabOrder = 0
+    OnDblClick = sgSchDblClick
+  end
+  object bCancel: TButton
+    Left = 488
+    Height = 25
+    Top = 323
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = bCancelClick
+    TabOrder = 1
+  end
+  object bOK: TButton
+    Left = 408
+    Height = 25
+    Top = 323
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 2
+  end
+  object mmSch: TMainMenu
+    left = 136
+    top = 212
+    object miActions: TMenuItem
+      Caption = 'Actions'
+      object miAddTask: TMenuItem
+        Caption = 'Add task'
+        OnClick = miAddTaskClick
+      end
+      object miCopyTask: TMenuItem
+        Caption = 'Copy task'
+        OnClick = miCopyTaskClick
+      end
+      object miEditTask: TMenuItem
+        Caption = 'Edit task'
+        OnClick = miEditTaskClick
+      end
+      object miDelTask: TMenuItem
+        Caption = 'Delete task'
+        OnClick = miDelTaskClick
+      end
+    end
+  end
+  object pmSch: TPopupMenu
+    left = 232
+    top = 216
+    object pmiAddTask: TMenuItem
+      Caption = 'Add task'
+      OnClick = pmiAddTaskClick
+    end
+    object pmiCopyTask: TMenuItem
+      Caption = 'Copy task'
+      OnClick = pmiCopyTaskClick
+    end
+    object pmiEditTask: TMenuItem
+      Caption = 'Edit task'
+      OnClick = pmiEditTaskClick
+    end
+    object pmiDelTask: TMenuItem
+      Caption = 'Delete task'
+      OnClick = pmiDelTaskClick
+    end
+  end
+end

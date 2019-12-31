@@ -1,0 +1,99 @@
+object fAlarmTemplateEditor: TfAlarmTemplateEditor
+  Left = 400
+  Height = 296
+  Top = 215
+  Width = 579
+  BorderIcons = [biSystemMenu]
+  Caption = 'Alarm templates list'
+  ClientHeight = 276
+  ClientWidth = 579
+  Menu = mmAlarmTemplateEditor
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.0.4.0'
+  object sgAlarms: TStringGrid
+    Left = 8
+    Height = 228
+    Top = 8
+    Width = 563
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ColCount = 1
+    Columns = <    
+      item
+        Title.Caption = 'Alarm template title'
+        Width = 540
+      end>
+    DefaultRowHeight = 18
+    FixedCols = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowSelect, goSmoothScroll]
+    PopupMenu = pmAlarmTemplateEditor
+    RowCount = 2
+    TabOrder = 0
+    OnDblClick = sgAlarmsDblClick
+  end
+  object bOK: TButton
+    Left = 416
+    Height = 25
+    Top = 244
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    Default = True
+    OnClick = bOKClick
+    TabOrder = 1
+  end
+  object bCancel: TButton
+    Left = 496
+    Height = 25
+    Top = 244
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = bCancelClick
+    TabOrder = 2
+  end
+  object mmAlarmTemplateEditor: TMainMenu
+    left = 132
+    top = 140
+    object miActions: TMenuItem
+      Caption = 'Actions'
+      object miAddTemplate: TMenuItem
+        Caption = 'Add template'
+        OnClick = miAddTemplateClick
+      end
+      object miCopyTemplate: TMenuItem
+        Caption = 'Copy template'
+        OnClick = miCopyTemplateClick
+      end
+      object miEditTemplate: TMenuItem
+        Caption = 'Edit template'
+        OnClick = miEditTemplateClick
+      end
+      object miDeleteTemplate: TMenuItem
+        Caption = 'Delete template'
+        OnClick = miDeleteTemplateClick
+      end
+    end
+  end
+  object pmAlarmTemplateEditor: TPopupMenu
+    left = 288
+    top = 144
+    object pmiAddTemplate: TMenuItem
+      Caption = 'Add template'
+      OnClick = pmiAddTemplateClick
+    end
+    object pmiCopyTemplate: TMenuItem
+      Caption = 'Copy template'
+      OnClick = pmiCopyTemplateClick
+    end
+    object pmiEditTemplate: TMenuItem
+      Caption = 'Edit template'
+      OnClick = pmiEditTemplateClick
+    end
+    object pmiDelTemplate: TMenuItem
+      Caption = 'Delete template'
+      OnClick = pmiDelTemplateClick
+    end
+  end
+end
