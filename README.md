@@ -1,4 +1,4 @@
-# lazarus-freepascal
+# IMS: Infrastructure monitoring system
 <b>IMS: Infrastructure monitoring system</b><br>
 This is really old project, created for home "datacenter" hardware monitoring.<br>
 Project uses <a href="https://sourceforge.net/projects/synalist/">Ararat Synapse library</a>, but internal network protocol is designed from the scratch.<br>
